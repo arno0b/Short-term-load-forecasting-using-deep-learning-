@@ -23,8 +23,11 @@ load-forecasting/
 │   ├── cnn_model.py             
 │   ├── mlp_model.py              
 │   ├── xgboost_model.py          
-│   └── encoder_decoder_model.py 
-│
+│   └── encoder_decoder_model.py
+|
+├── notebooks/
+│   └── POC.ipynb
+|
 ├── config.yaml                  
 ├── requirements.txt              
 ├── README.md                   
