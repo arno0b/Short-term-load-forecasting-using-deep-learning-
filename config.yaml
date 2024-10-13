@@ -1,0 +1,51 @@
+# config.yaml
+
+data:
+  file_path: "data/clean_data.csv"   # Path to the dataset
+
+preprocessing:
+  outlier_columns:
+    - WindGustKmph
+    - windspeedKmph
+
+training:
+  batch_size: 256
+  buffer_size: 1000
+  epochs: 100
+  patience: 10
+
+lstm:
+  units: 100
+  dense_units: 200
+  dropout: 0.2
+  learning_rate: 0.0003
+
+stacked_lstm:
+  units_1: 250
+  units_2: 150
+  dense_units: 150
+  dropout: 0.2
+  learning_rate: 0.0003
+
+cnn:
+  filters: 48
+  kernel_size: 2
+  dense_units: 48
+  learning_rate: 0.0003
+
+mlp:
+  dense_units_1: 200
+  dense_units_2: 150
+  dense_units_3: 100
+  dense_units_4: 50
+  output_units: 1
+  dropout: 0.1
+  learning_rate: 0.0003
+
+xgboost:
+  eta: 0.03
+  max_depth: 180
+  subsample: 1.0
+  objective: 'reg:squarederror'
+  eval_metric: 'rmse'
+  early_stopping_rounds: 10
